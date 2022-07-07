@@ -1,0 +1,14 @@
+---
+- hosts: servers
+  serial: 1
+  tasks:
+
+  - name: Creates directory
+    file:
+      path: /tmp/test2
+      state: directory
+
+  - name: Template file with hostname
+    template:
+        src: container_hostname.j2
+        dest: /tmp/test2/hostname.conf

@@ -1,0 +1,19 @@
+---
+- hosts: servers
+  handlers:
+
+  - name: Handler_No1
+    debug:
+      msg: "Message from Handler Number 1"
+
+  tasks:
+
+   - name: Ansible apt install vim
+     apt:
+       name: vim
+       state: present
+
+   - name: Ansible apt install tar
+     apt:
+       name: tar
+       state: present

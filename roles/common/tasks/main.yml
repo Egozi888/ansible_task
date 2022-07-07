@@ -1,0 +1,11 @@
+---
+- name: install tar and vim
+  apt: name=tar,vim state=present
+
+- name: Creates directory
+  file:
+    path: /tmp/test1
+    state: directory
+
+- name: create file
+  copy: src=hello.txt dest=/tmp/test1
