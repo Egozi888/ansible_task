@@ -7,5 +7,5 @@
     path: /tmp/test1
     state: directory
 
-- name: create file
+- name: Copy file
   copy: src=hello.txt dest=/tmp/test1
